@@ -13,5 +13,5 @@ In this project students are asked to write Python code to create a program that
 - washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+When trying to figure out how to best deal with *caseless matching* I consulted [Programiz' article on Python String casefold()](https://www.programiz.com/python-programming/methods/string/casefold).
 

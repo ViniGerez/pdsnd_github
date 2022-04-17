@@ -184,8 +184,8 @@ def user_stats(df):
 
     # TO DO: Display earliest year of birth
     try:
-      earliest_year_of_birth = df['Birth Year'].min()
-      print('\nEarliest Year of Birth: {}'.format(round(earliest_year_of_birth)))
+      earliest_birth_year = df['Birth Year'].min()
+      print('\nEarliest Year of Birth: {}'.format(round(earliest_birth_year)))
     except KeyError:
       print("\nEarliest Year of Birth:\nNo data available for the current selection.")
 

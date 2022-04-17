@@ -2,9 +2,9 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': r'C:\Users\vinicius.gerez\Desktop\Udacity\Python\first-script-py\Python-Project-Files\chicago.csv',
-              'new york city': r'C:\Users\vinicius.gerez\Desktop\Udacity\Python\first-script-py\Python-Project-Files\new_york_city.csv',
-              'washington': r'C:\Users\vinicius.gerez\Desktop\Udacity\Python\first-script-py\Python-Project-Files\washington.csv' }
+CITY_DATA = { 'chicago': r'C:\Users\vinicius.gerez\Desktop\Udacity\Github\project_03\pdsnd_github\chicago.csv',
+              'new york city': r'C:\Users\vinicius.gerez\Desktop\Udacity\Github\project_03\pdsnd_github\new_york_city.csv',
+              'washington': r'C:\Users\vinicius.gerez\Desktop\Udacity\Github\project_03\pdsnd_github\washington.csv' }
 
 def get_filters():
     """Asks user to specify a city, month, and day to analyze.

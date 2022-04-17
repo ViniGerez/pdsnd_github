@@ -49,9 +49,9 @@ def get_filters():
 
     print('-'*40)
     print('\nYou chose:\n'
-          '\nCity = ', city.title(), '\n'
-          '\nMonth = ', month.title(), '\n'
-          '\nDay of the week = ', day.title(), '\n')
+          '\nCity = {} \n'.format(city.title()),
+          '\nMonth = {} \n'.format(month.title()),
+          '\nDay of the week = {} \n'.format(day.title()))
     print('-'*40)
     return city, month, day
 
@@ -101,18 +101,18 @@ def time_stats(df):
 
     # TO DO: display the most common month
     most_common_month = df['month'].mode()[0]
-    print('Most Common Month:', most_common_month)
+    print('Most Common Month: {}'.format(most_common_month))
 
 
     # TO DO: display the most common day of week
     most_common_day_of_week = df['day_of_week'].mode()[0]
-    print('Most Common day:', most_common_day_of_week)
+    print('Most Common day: {}'.format(most_common_day_of_week))
 
 
     # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     most_common_start_hour = df['hour'].mode()[0]
-    print('Most Common Hour:', most_common_start_hour)
+    print('Most Common Hour: {}'.format(most_common_start_hour))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -127,18 +127,18 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     most_common_start_station = df['Start Station'].mode()[0]
-    print('Most Commonly used start station:', most_common_start_station)
+    print('Most Commonly used start station: {}'.format(most_common_start_station))
 
 
     # TO DO: display most commonly used end station
     most_common_end_station = df['End Station'].mode()[0]
-    print('\nMost Commonly used end station:', most_common_end_station)
+    print('\nMost Commonly used end station: {}'.format(most_common_end_station))
 
 
     # TO DO: display most frequent combination of start station and end station trip
     df['Station Combination'] = df['Start Station'] + ' to ' + df['End Station']
     most_common_station_combination = df['Station Combination'].mode()[0]
-    print('\nMost frequent combination of start station and end station trip:', most_common_station_combination)
+    print('\nMost frequent combination of start station and end station trip: {}'.format(most_common_station_combination))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -153,12 +153,12 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    print('The total travel time is equivalent to ', round(total_travel_time/86400, 2), 'days, or ', round(total_travel_time/3600, 2), 'hours')
+    print('The total travel time is equivalent to {} days, or {} hours'.format(round(total_travel_time/86400, 2), round(total_travel_time/3600, 2)))
 
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    print('The average (mean) travel time is equivalent to ', round(mean_travel_time/60, 2), " minutes")
+    print('The average (mean) travel time is equivalent to {} minutes'.format(round(mean_travel_time/60, 2)))
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -173,33 +173,33 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     count_of_user_types = df['User Type'].value_counts()
-    print('User Types:\n', count_of_user_types)
+    print('User Types:\n{}'.format(count_of_user_types))
 
     # TO DO: Display counts of gender
     try:
       gender_types = df['Gender'].value_counts()
-      print('\nGender Types:\n', gender_types)
+      print('\nGender Types:\n{}'.format(gender_types))
     except KeyError:
       print("\nGender Types:\nNo gender data available for the current selection.")
 
     # TO DO: Display earliest year of birth
     try:
       earliest_year_of_birth = df['Birth Year'].min()
-      print('\nEarliest Year of Birth:', round(earliest_year_of_birth))
+      print('\nEarliest Year of Birth: {}'.format(round(earliest_year_of_birth)))
     except KeyError:
       print("\nEarliest Year of Birth:\nNo data available for the current selection.")
 
     # TO DO: Display most recent year of birth
     try:
       most_recent_year_of_birth = df['Birth Year'].max()
-      print('\nMost Recent Year of Birth:', round(most_recent_year_of_birth))
+      print('\nMost Recent Year of Birth: {}'.format(round(most_recent_year_of_birth)))
     except KeyError:
       print("\nMost Recent Year of Birth:\nNo data available for the current selection.")
 
     # TO DO: Display most common year of birth
     try:
       most_common_year_of_birth = df['Birth Year'].mode()[0]
-      print('\nMost Common Year of Birth:', round(most_common_year_of_birth))
+      print('\nMost Common Year of Birth: {}'.format(round(most_common_year_of_birth)))
     except KeyError:
       print("\nMost Common Year of Birth:\nNo data available for the current selection.")
 
